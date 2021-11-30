@@ -1,0 +1,29 @@
+4.write a class to calculate uber price
+
+var PRICE_PER_KM = 10;
+class Uber{
+      constructor(){
+            this.price = 0;
+            this.km = 0;
+      }
+
+
+      calculatePrice(){
+            this.price = this.km * PRICE_PER_KM;
+      }
+
+      setkm(kmsTravelled = 1){
+            this.km = kmsTravelled;
+            this.calculatePrice();
+      } 
+
+      getPrice(){
+             return this.price;
+      }
+
+}
+
+
+const uber = new Uber();
+uber.setkm(40);
+console.log( "uber price", uber.getPrice()); 

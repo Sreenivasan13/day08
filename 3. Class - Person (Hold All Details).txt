@@ -1,0 +1,21 @@
+3.Write a “person” class to hold all the details.
+
+function Person (firstname, lastname, occupation, gender) {
+     this.firstname = firstname
+     this.lastname = lastname
+     this.occupation = occupation
+     this.gender = gender
+}
+
+// lets add some properties to the prototype property of the Person constructor.
+Person.prototype.getPersonBio = function () {
+          console.log("Hello my name is " + this.lastname + " " + this.firstname + " I am a " + this.occupation )
+    }
+const Developer = new Person("Lawrence", "Eagles", "Software Developer", "Male")
+const Doctor = new Person("Ben", "Carson", "Neurosurgeon", "Male")
+const Scientist = new Person("Albert", "Einstein", "Scientist", "Male")
+
+console.log("Developer's bio:", Developer.getPersonBio())
+console.log("Doctor's bio:", Doctor.getPersonBio())
+console.log("Scientist's bio", Scientist.getPersonBio())
+ 

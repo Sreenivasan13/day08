@@ -1,0 +1,54 @@
+2.Circle - Class
+
+Convert the UML diagram to Typescript class.
+    - use number for double
+
+
+class Circle {
+  static fromDiameter(diameter) {
+    return new Circle(diameter / 2);
+  }
+
+  constructor(radius, color) {
+    if (radius <= 0) {
+        throw('radius must be a positive number')
+    }
+    this.radius = parseDouble(radius);
+    this.color = "red";
+  }
+  setRadius(radius){
+        this.radius = radius;
+        this.getRadius();
+
+  }
+  getRadius(){
+        return this.radius;
+
+  }
+  setColor(color){
+        this.color = color;
+        this.getColor();
+
+  }
+  getColor(){
+        return this.color;
+
+  }
+  getCircumference() {
+    return Math.PI * this.radius * 2;
+  }
+
+  getArea() {
+    return Math.PI * this.radius * this.radius;
+  }
+
+   toString(){
+         this.color = "";
+         this.setColor();
+
+   }
+}
+
+
+let circle = Circle.fromDiameter(4)
+
